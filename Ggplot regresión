@@ -1,0 +1,11 @@
+library(ggplot2)
+
+library(tidyverse)
+
+ggplot(data=ensayo, aes(x=Time_of_stay_in_Catalonia, y=Orthography, color= Heritage_language_program))+
+  geom_point()+
+  stat_smooth(method="lm",se = FALSE)+
+  labs(title="",
+       x="Time of stay in Catalonia (Years)",
+       y="Orthography score")
+              
